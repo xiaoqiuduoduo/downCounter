@@ -1,0 +1,23 @@
+这是一个倒计时，单位是100ms，格式为 剩余01时57分10.9秒。此计时器只考虑在同一年中同一个月的时间比较。
+
+在倒计时的容器div中传入属性设置起始时间和结束时间。写在html中是为了方便后台将时间数据传进来。
+
+ endYear //结束“年”
+ endMth //结束“月”
+ endDay //结束“日”
+ endHour //结束“时”
+ endMin //结束“分”
+ endSec //结束“秒”
+ beginYear //开始“年”
+ beginMth //开始“月”
+ beginDay //开始“日”
+ beginHour //开始“时”
+ beginMin //开始“分”
+ beginSec //开始“秒”
+ 
+其中endHour, beginHour, beginMin, beginSec是必选的，其他参数是可选的。若年月日没有显示设置，则默认取客户端当前的年月日，而时分秒没有设置则默认为0。“月”是从0开始算的，即endMth=0表示结束月是1月份。
+
+例:<div endMth="10" endHour="16" beginHour="14" beginMin="1" beginSec="1" id="downCounter">00:00:00.0</div>
+
+初始化：downCounter.init();
+
